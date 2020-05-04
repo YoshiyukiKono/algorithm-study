@@ -17,8 +17,6 @@ def solution(sequence):
             if DEBUG: print(f"{left_edge} {j} : ({sequence[left_edge]} > {sequence[j]}) ? {sequence[left_edge] > sequence[j]}",
                       f"({subseq_size_holder[left_edge]} < {subseq_size_holder[j]+1}) ? ",
                       f"{subseq_size_holder[left_edge] < subseq_size_holder[j] + 1}");
-            #if sequence[left_edge] > sequence[j] and subseq_size_holder[left_edge] < subseq_size_holder[j] + 1:
-            #    subseq_size_holder[left_edge] = subseq_size_holder[j] + 1
             if sequence[left_edge] > sequence[j]:
                 subseq_size_holder[left_edge] = max(subseq_size_holder[left_edge], subseq_size_holder[j] + 1)
             if DEBUG: print(subseq_size_holder);
